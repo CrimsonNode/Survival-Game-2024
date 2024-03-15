@@ -13,6 +13,7 @@ public class AtesEtme : MonoBehaviour
     AudioSource SesKaynak;
     public AudioClip AtesSesi;
     public float Menzil;
+    public GameObject mermiEfekti;
 
     // Start is called before the first frame update
     void Start()
@@ -28,14 +29,14 @@ public class AtesEtme : MonoBehaviour
         {
             Fire();
             GunTimer = Time.time + TaramaHizi;
-            ;
+            Instantiate(mermiEfekti,hit.point,Quaternion.LookRotation(hit.normal));
 
         }
     }
 
     void Fire()
     {
-
+        
         if (Physics.Raycast(MermiCikisNoktasi.transform.position, MermiCikisNoktasi.transform.forward, out hit, Menzil))
         {
             MuzzleFlash.Play();
