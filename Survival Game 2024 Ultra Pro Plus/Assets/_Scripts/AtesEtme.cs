@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class AtesEtme : MonoBehaviour
 {
@@ -14,7 +16,12 @@ public class AtesEtme : MonoBehaviour
     public AudioClip AtesSesi;
     public float Menzil;
     public GameObject mermiEfekti;
-
+    public float mermi;
+    public float sarjor;
+    public float tasinanmermi;
+    float eklenenmermi;
+    float reloadtimer;
+    public Text mermisayac;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +31,20 @@ public class AtesEtme : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        mermisayac.text=mermi+"/"+tasinanmermi;
 
-        if (Input.GetKey(KeyCode.Mouse0) && AtesEdebilir == true && Time.time > GunTimer)
+
+        eklenenmermi=sarjor-mermi;
+        if(eklenenmermi>tasinanmermi){
+            eklenenmermi=tasinanmermi;
+        }
+        if(Input.GetKeyDown(KeyCode.R)&&eklenenmermi>0 && tasinanmermi > 0){
+            if(Time.time > reloadtimer){
+                StartCoroutine(Reload());
+                reloadtimer=Time.time;
+            }
+        }
+        if (Input.GetKey(KeyCode.Mouse0) && AtesEdebilir == true && Time.time > GunTimer && mermi > 0)
         {
             Fire();
             GunTimer = Time.time + TaramaHizi;
@@ -36,6 +55,13 @@ public class AtesEtme : MonoBehaviour
 
     void Fire()
     {
+        if(mermi<=30){
+            AtesEdebilir=false;
+        }
+        if(mermi>0){
+            AtesEdebilir=true;
+            mermi--;
+        }
         
         if (Physics.Raycast(MermiCikisNoktasi.transform.position, MermiCikisNoktasi.transform.forward, out hit, Menzil))
         {
@@ -45,5 +71,11 @@ public class AtesEtme : MonoBehaviour
             Debug.Log(hit.transform.name);
         }
     }
+        IEnumerator Reload(){
+            yield return new WaitForSeconds(1.2f);
+            mermi=mermi+eklenenmermi;
+            tasinanmermi=tasinanmermi-eklenenmermi;
+        }
+
 
 }
