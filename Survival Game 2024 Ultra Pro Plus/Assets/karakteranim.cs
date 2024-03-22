@@ -21,5 +21,12 @@ public class karakterAnim : MonoBehaviour
             animator.SetBool("sarjorDegistir",false);
         }
 
+         if(Input.GetKey(KeyCode.LeftShift)){
+            animator.SetBool("run",true);
+        }
+        else{
+            animator.SetBool("run",false);
+        }
+
     }
 }
