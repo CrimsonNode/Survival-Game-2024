@@ -44,6 +44,7 @@ public class AtesEtme : MonoBehaviour
                 reloadtimer=Time.time;
             }
         }
+        
         if (Input.GetKey(KeyCode.Mouse0) && AtesEdebilir == true && Time.time > GunTimer && mermi > 0)
         {
             Fire();
