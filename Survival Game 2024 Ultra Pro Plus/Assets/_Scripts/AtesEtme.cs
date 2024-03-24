@@ -49,8 +49,14 @@ public class AtesEtme : MonoBehaviour
         {
             Fire();
             GunTimer = Time.time + TaramaHizi;
-            Instantiate(mermiEfekti,hit.point,Quaternion.LookRotation(hit.normal));
-
+            if (Physics.Raycast(MermiCikisNoktasi.transform.position, MermiCikisNoktasi.transform.forward, out hit, Menzil))
+            {
+                MuzzleFlash.Play();
+                SesKaynak.PlayOneShot(AtesSesi); // PlayOneShot kullanımı tavsiye edilir.
+                Debug.Log(hit.transform.name);
+                Quaternion muzzleRotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
+                Instantiate(mermiEfekti, hit.point, muzzleRotation); // Ateş efekti yaratırken rotasyon kullanılmıyor.
+            }
         }
     }
 
