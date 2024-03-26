@@ -5,7 +5,12 @@ using UnityEngine.UI;
 
 
 public class AtesEtme : MonoBehaviour
-{
+{ 
+    public float jumpForce = 10f; // Zıplama kuvveti
+    public float groundCheckDistance = 0.2f; // Yere temas kontrol mesafesi
+
+    private Rigidbody rb;
+    private bool isGrounded;
     RaycastHit hit;
     public GameObject MermiCikisNoktasi;
     public bool AtesEdebilir;
@@ -25,12 +30,20 @@ public class AtesEtme : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+          rb = GetComponent<Rigidbody>();
         SesKaynak = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance);
+
+        // Zıplama
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
         mermisayac.text=mermi+"/"+tasinanmermi;
 
 
