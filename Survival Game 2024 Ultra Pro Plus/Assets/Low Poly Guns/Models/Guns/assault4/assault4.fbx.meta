@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Survival Game 2024 Ultra Pro Plus/Assets/Low Poly Guns/Models/Guns/assault4/assault4.fbx.meta
 guid: ffb3f5f9531da764c906b0baf3285c62
 ModelImporter:
   serializedVersion: 19301
@@ -6,6 +7,15 @@ ModelImporter:
   externalObjects: {}
   materials:
     materialImportMode: 1
+=======
+guid: 530db1b73eb72664184185ea880293d0
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+>>>>>>> Stashed changes:Survival Game 2024 Ultra Pro Plus/Assets/InGameAssets/UnityTechnologies/ParticlePack/Shared/Environment/Models/FloorTiny.fbx.meta
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -14,6 +24,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -39,27 +50,47 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+<<<<<<< Updated upstream:Survival Game 2024 Ultra Pro Plus/Assets/Low Poly Guns/Models/Guns/assault4/assault4.fbx.meta
+=======
+    importPhysicalCameras: 1
+>>>>>>> Stashed changes:Survival Game 2024 Ultra Pro Plus/Assets/InGameAssets/UnityTechnologies/ParticlePack/Shared/Environment/Models/FloorTiny.fbx.meta
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+<<<<<<< Updated upstream:Survival Game 2024 Ultra Pro Plus/Assets/Low Poly Guns/Models/Guns/assault4/assault4.fbx.meta
+=======
+    nodeNameCollisionStrategy: 1
+>>>>>>> Stashed changes:Survival Game 2024 Ultra Pro Plus/Assets/InGameAssets/UnityTechnologies/ParticlePack/Shared/Environment/Models/FloorTiny.fbx.meta
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+<<<<<<< Updated upstream:Survival Game 2024 Ultra Pro Plus/Assets/Low Poly Guns/Models/Guns/assault4/assault4.fbx.meta
+=======
+    optimizeBones: 1
+>>>>>>> Stashed changes:Survival Game 2024 Ultra Pro Plus/Assets/InGameAssets/UnityTechnologies/ParticlePack/Shared/Environment/Models/FloorTiny.fbx.meta
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+<<<<<<< Updated upstream:Survival Game 2024 Ultra Pro Plus/Assets/Low Poly Guns/Models/Guns/assault4/assault4.fbx.meta
+=======
+    strictVertexDataChecks: 0
+>>>>>>> Stashed changes:Survival Game 2024 Ultra Pro Plus/Assets/InGameAssets/UnityTechnologies/ParticlePack/Shared/Environment/Models/FloorTiny.fbx.meta
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -91,6 +122,12 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
+<<<<<<< Updated upstream:Survival Game 2024 Ultra Pro Plus/Assets/Low Poly Guns/Models/Guns/assault4/assault4.fbx.meta
+=======
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+>>>>>>> Stashed changes:Survival Game 2024 Ultra Pro Plus/Assets/InGameAssets/UnityTechnologies/ParticlePack/Shared/Environment/Models/FloorTiny.fbx.meta
   additionalBone: 0
   userData: 
   assetBundleName: 
